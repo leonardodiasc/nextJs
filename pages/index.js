@@ -1,6 +1,15 @@
 import Link from 'next/link'
 import React from 'react';
-
+function GlobalStyle(){
+    return (
+        <style jsx>{`
+            body{
+                font-family: sans-serif;
+            }
+        `}
+        </style>
+    )
+}
 function Title({children, as}){
     const Tag = as;
     return(
@@ -17,10 +26,12 @@ function Title({children, as}){
 export default function HomePage(){
     return(
         <div>
-            <Title as="h1">Alura Cases - Home</Title>
-            <Link href="/faq">
-                Ir para o FAQ
-            </Link>
+            <GlobalStyle>
+                <Title as="h1">Alura Cases - Home</Title>
+                <Link href="/faq">
+                    Ir para o FAQ
+                </Link>
+            </GlobalStyle>
         </div>
 
     )
