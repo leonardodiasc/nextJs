@@ -1,12 +1,13 @@
 import Link from 'next/link'
 import React from 'react';
 
-function Title({children}){
+function Title({children, as}){
+    const Tag = as;
     return(
         <React.Fragment>
             <h1>{children}</h1>
             <style jsx>{`
-            h1{
+            ${Tag}{
                     color: red;
             }
             `}</style>
@@ -16,7 +17,7 @@ function Title({children}){
 export default function HomePage(){
     return(
         <div>
-            <Title>Alura Cases - Home</Title>
+            <Title as="h1">Alura Cases - Home</Title>
             <Link href="/faq">
                 Ir para o FAQ
             </Link>
