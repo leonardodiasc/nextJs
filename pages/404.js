@@ -1,3 +1,4 @@
+import Link from 'next/link'
 export default function page404() {
     return(
         <div>
