@@ -1,5 +1,9 @@
 import Link from 'next/link'
 import React from 'react';
+import HomeScreen from '../src/screens/HomeScreen';
+
+export default HomeScreen;
+/* 
 function GlobalStyle(){
     return (
         <style jsx global>{`
@@ -35,3 +39,4 @@ export default function HomePage(){
 
     )
 }
+ */
