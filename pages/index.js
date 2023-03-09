@@ -2,7 +2,7 @@ import Link from 'next/link'
 import React from 'react';
 function GlobalStyle(){
     return (
-        <style jsx>{`
+        <style jsx global>{`
             body{
                 font-family: sans-serif;
             }
@@ -26,12 +26,11 @@ function Title({children, as}){
 export default function HomePage(){
     return(
         <div>
-            <GlobalStyle>
+            <GlobalStyle/>
                 <Title as="h1">Alura Cases - Home</Title>
                 <Link href="/faq">
                     Ir para o FAQ
                 </Link>
-            </GlobalStyle>
         </div>
 
     )
